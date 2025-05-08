@@ -1,2 +1,2 @@
-# AI-Fundamentals
+# IT-Education
 Education
