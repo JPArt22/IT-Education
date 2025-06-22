@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Página principal</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+    <h1>Bienvenido</h1>
+
+    <form id="exam-form">
+        <label for="full-name">Nombre completo:</label>
+        <input type="text" id="full-name" required>
+
+        <label for="document-number">Número de documento:</label>
+        <input type="text" id="document-number" required>
+
+        <button id="open-exam-button" onclick="openExam()">Abrir examen</button>
+    </form>
+
+    <div id="exam-container"></div>
+
+    <script src="main.js"></script>
+</body>
+</html>

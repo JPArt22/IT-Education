@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto DS</title>
+    <style>
+      /* Estilos para el enlace */
+      .attractive-link {
+          display: inline-block;
+          padding: 10px 20px;
+          background-color: #00ff04;
+          color: #000000;
+          text-decoration: none;
+          border-radius: 4px;
+          transition: background-color 0.3s ease;
+      }
+
+      .attractive-link:hover {
+          background-color: #00ff37;
+      }
+  </style>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="estilos/Estilos.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <script src="js/BaseUsuarios.js" type="module"></script> 
+</head>
+
+
+
+<body>
+  <button type="button" onclick="openProyecto2Window()" style="background-color: #FFC107; color: rgb(0, 0, 0); font-size: 20px; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;"><b>Take a easy Math TEST here!</b></button>
+  <script>
+    function openProyecto2Window() {
+      var windowFeatures = 'width=800,height=600'; // Características de la nueva ventana
+      var url = 'grafos/index.html'; // Ruta relativa al archivo index.html del Proyecto 2
+      window.open(url, '_blank', windowFeatures);
+    }
+  </script>
+  
+  <a href="hash/main.html" target="_blank" class="attractive-link"><b>Take a hard Math TEST here</b></a>
+  
+  <button type="button" onclick="openProyecto2Window()" style="background-color: #FFC107; color: rgb(0, 0, 0); font-size: 20px; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;"><b>Math and LC</b></button>
+  <script>
+    function openProyecto2Window() {
+      var windowFeatures = 'width=800,height=600'; // Características de la nueva ventana
+      var url = 'estructuraslineales/index.html'; // Ruta relativa al archivo index.html del Proyecto 2
+      window.open(url, '_blank', windowFeatures);
+    }
+  </script>
+ <!-- Modal ****  registro  ********************************************************************* -->
+
+
+
+<!-- Modal ********** desplegable izquierda********* Quines Somos************************************************************ -->
+<div class="offcanvas offcanvas-start  " tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasLabel">¿ Quiénes Somos</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    Gestores de material didáctico para  la comprensión y el desarrollo en las pruebas de opción múltiple con única respuesta.
+  </div>
+</div>
+<!--    fin    Imagenes de incio            -->
+
+
+<!--  Modal Centro mision -->
+<div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasBottomLabel">Misión</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body small">
+    Un equipo de docentes investigadores con el propósito que sus estudiantes amplíen y definan sus destrezas personales y colectivas para la Prueba de Ascenso.
+  </div>
+</div>
+<!-- Fin Modal Centro -->
+
+<!-- Modal derecha vision -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasRightLabel">Visión</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    Brindar al cuerpo estudiantil herramientas didácticas para que alcancen el máximo desarrollo de sus capacidades procedimentales, académicas profesionales.
+  </div>
+</div>
+<!-- Fin  Modal derecha vision -->
+
+
+
+ <!-- Cuerpo de la pagina -->
+
+
+ <div class="container-md text-center ">
+        <div class="row">
+
+
+          <div class="col   text-warning m-5">
+            <p class="h2 display-5 " class="text-center " >Procesos de Pensamiento  Ascenso a Subintendente! material didáctico   </p>
+          </div>  
+
+
+          <div class="col "> 
+              <!-- Imagenes de incio de portada -->
+              <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-bs-interval="1000">
+                    <img class="Im" src="https://p4.wallpaperbetter.com/wallpaper/626/886/462/book-math-school-stats-wallpaper-preview.jpg" class="d-inline-block " alt="...">
+                    <div class="carousel-caption d-none d-md-block">  
+                    
+
+                    </div>
+                  </div>
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <img class="Im" src="https://th.bing.com/th/id/OIP.IU_x3nubfCx9Szq8f3UByQEyDM?pid=ImgDet&rs=1" class="d-inline-block " alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                    
+
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img class="Im" src="https://www.lasalle.edu.co/wcm/connect/fe03687d-6288-429a-95ad-be5fc6994069/Nuevos+directivos+lasallistas+para+2023.jpg?MOD=AJPERES&CACHEID=ROOTWORKSPACE-fe03687d-6288-429a-95ad-be5fc6994069-okmhrop" class="d-inline-block " alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <!--   
+                      <h5>Third slide label</h5>
+                      <p>Some representative placeholder content for the third slide.</p>
+                      -->
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+
+
+
+        </div>
+              <!-- Imagenes de inicio de portada -->
+
+
+                
+          <div class="row ">      
+            <div class="row ">
+              <div class="col ">                   
+                <a class="btn btn-dark" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                  <i class="bi bi-hurricane"></i> Quienes Somos?
+                </a>
+
+              </div>
+              <div class="col ">
+                <a class="btn btn-dark" data-bs-toggle="offcanvas" href="#offcanvasBottom" role="button" aria-controls="offcanvasExample">
+                  <i class="bi bi-hurricane"></i> Misión
+                </a>
+              </div>
+              <div class="col ">
+                <a class="btn btn-dark" data-bs-toggle="offcanvas" href="#offcanvasRight" role="button" aria-controls="offcanvasExample">
+                  <i class="bi bi-hurricane"></i> Visión
+                </a>
+              </div>
+              
+          </div>
+
+
+
+            <div class="col-sm-6 ">
+
+              <div class="row ">
+                  <div class="col text-warning  ">
+                    <p class="h2 display-6" class="text-center " >¡RAZONAMIENTO !</p>
+                    </div>
+                  
+              </div>
+              
+              
+
+              <div class="row">
+                    <div class="col ">                   
+                      <div class="card text-start" >
+                        <img src="./Mate.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Operaciones Basicas</h5>
+                          <p class="card-text">Resolver ejercicios de suma y resta .</p>
+                        </div>
+                        <div class="card-footer">
+<!--  Ejercicios de Operaciones Basicas    -->
+
+                         
+                              <!--TAlleres -->
+                              <div class="dropdown">
+                                <button  class="btn btn-dark dropdown-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                  Operaciones
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-dark">
+                                  <li>
+                                  <!-- Button taller1 -->
+                                  
+                                  <button id="Suma" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#OperacionesBAsicas" >
+                                    Suma
+                                  </button>
+                                   <button id="Resta" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#OperacionesBAsicas" >
+                                    Resta
+                                  </button>              
+                                  </li>
+                                  <li>
+                                    <!-- Button taller1 -->
+                                    <button id="Multiplicacion" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#OperacionesBAsicas" >
+                                    Multiplicación
+                                    </button>
+                                               
+                                    </li>
+                                <li>
+
+                                  <button id="Division" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#OperacionesBAsicas" >
+                                    División
+                                  </button>
+                                </li>
+
+      
+                
+                                </ul>
+                            </div>
+                              <!--TAlleres -->
+
+<div id="proyecto2-container"></div>
+
+                            
+<!--Fin de   Ejercicios de Operaciones Basicas    -->
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col ">
+                      <div class="card text-start ">
+                        <img src="./Mate.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Porcentajes</h5>
+                          <p class="card-text">Los porcentajes son importantes en la vida practica y.</p>
+                        </div>
+                        <div class="card-footer">
+
+                          <small class="text-muted">Ejercicios</small>
+
+
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col ">
+                      <div class="card text-start ">
+                        <img src="./Mate.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Graficas</h5>
+                          <p class="card-text">Las graficas estan en todo lo que nos rodea aprenders.</p>
+                        </div>
+                        <div class="card-footer">
+                          <small class="text-muted">Ejercicios</small>
+                        </div>
+                      </div>
+                    </div>
+              </div>
+
+
+                <div class="row">
+                  <div class="col ">
+                    <div class="card text-start ">
+                      <img src="./Mate.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Conjuntos</h5>
+                        <p class="card-text">Importante aprender conjuntos para la vida y el amor .</p>
+                      </div>
+                      <div class="card-footer">
+                        <small class="text-muted">Ejercicios</small>
+                      </div>
+                    </div>
+                  </div>
+              <div class="col ">
+                <div class="card text-start ">
+                  <img src="./Mate.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Conteo</h5>
+                    <p class="card-text">Es importante aprender conteo y ejercicios para.</p>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted">ejercicios</small>
+                  </div>
+                </div>
+              </div>
+                  <div class="col ">
+                      
+          
+                    <div class="card text-start ">
+                      <img src="./Mate.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Examenes</h5>
+                        <p class="card-text">Pon en practica todo lo aprendido con preguntas icf.</p>
+                      </div>
+                    <div class="card-footer">
+
+                         <!--TAlleres -->
+                         <div class="dropdown">
+                          <button  class="btn btn-dark dropdown-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Talleres
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-dark">
+                            <li>
+                            <!-- Button taller1 -->
+                            
+                            <button id="Taller1R" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" >
+                                Taller1 
+                            </button>
+                             <button id="video1R" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#" >
+                              Video1
+                            </button>              
+                            </li>
+                            <!-- Button taller2 -->
+                            
+                            <button id="Taller2R" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" >
+                              Taller2 
+                          </button>
+                           <button id="video2R" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#" >
+                            Video2
+                          </button>              
+                          </li>
+
+
+          
+                          </ul>
+                      </div>
+                        <!--TAlleres -->
+
+                         
+                      </div>
+
+                  </div>
+
+
+
+
+
+
+                  </div>
+                </div>
+
+
+
+
+            </div>
+            <div class="col-sm-6 ">
+
+              <div class="row">
+                  <div class="col text-light ">
+                    <p class="h2 display-6" class="text-center "  >¡Lectura Crítica!</p>
+                    </div>
+              </div>
+            
+
+              <div class="row">
+                  <div class="col ">
+                                       <!-- Lectura rapida-->
+                                       <div class="card text-start ">
+                                        <img src="./Lectura.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                          <h5 class="card-title">Lectura Rapida </h5>
+                                          <p class="card-text">Es importante aprender conteo y ejercicios para la vida.</p>
+                                        </div>
+                                        <div class="card-footer">
+              <!--TAller Lectura RApida-->
+                      <div class="dropdown"> 
+                        <button  class="btn btn-dark dropdown-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Talleres2
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                          <li>
+                            <!-- Button taller1 -->
+                            
+                            <button id="Rapida" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Lectura400" >
+                            Palabras/min
+                            </button>
+                                      
+                            </li>
+                        </ul>
+
+                      </div>
+              <!--TAller Lectura RApida-->
+                                        </div>
+                                      </div>
+                                      <!-- Lectura rapida-->
+                  </div>
+
+
+                  <div class="col ">
+                                     <!-- LEctura contextual-->
+                                     <div class="card text-start ">
+                                      <img src="./Lectura.jpg" class="card-img-top" alt="...">
+                                      <div class="card-body">
+                                        <h5 class="card-title">Lectura Contextual</h5>
+                                        <p class="card-text">Es importante aprender conteo y ejercicios para la vida.</p>
+                                      </div>
+                                      <div class="card-footer">
+
+              <!--TAller Lectura contextual-->
+              <div class="dropdown"> 
+                <button  class="btn btn-dark dropdown-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Talleres3
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li>
+                    <!-- Button taller1 -->
+                    
+                    <button id="LecturaContextual" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Lectura401" >
+                    Palabras/min
+                    </button>
+                              
+                    </li>
+                </ul>
+
+              </div>
+           <!--TAller Lectura contextual-->
+                                       
+
+                                      </div>
+                                    </div>
+                                    <!--fin  Lectura contextual-->
+                  </div>
+
+
+
+                  <div class="col ">
+                                       <!-- Cuentos 2-->
+                                       <div class="card text-start ">
+                                        <img src="./Lectura.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                          <h5 class="card-title">Cuentos 2 </h5>
+                                          <p class="card-text">Es importante aprender conteo y ejercicios para la vida.</p>
+                                        </div>
+                                        <div class="card-footer">
+                                          <small class="text-muted">ejercicios</small>
+                                        </div>
+                                      </div>
+                                      <!-- Lectura rapida-->
+                    </div>
+                </div>
+
+                <div class="row">
+                  <div class="col ">
+                                     <!-- Cuentos 1-->
+                                     <div class="card text-start ">
+                                      <img src="./Lectura.jpg" class="card-img-top" alt="...">
+                                      <div class="card-body">
+                                        <h5 class="card-title">Cuentos 1 </h5>
+                                        <p class="card-text">Es importante aprender conteo y ejercicios para la vida.</p>
+                                      </div>
+                                      <div class="card-footer">
+                                        <small class="text-muted">ejercicios</small>
+                                      </div>
+                                    </div>
+                                    <!-- cuentos-->
+                  </div>
+                  <div class="col ">
+                   <!-- Analisis leterario-->
+                        <div class="card text-start ">
+                          <img src="./Lectura.jpg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h5 class="card-title">Anaisis literario </h5>
+                            <p class="card-text">Es importante aprender conteo y ejercicios para la vida.</p>
+                          </div>
+                          <div class="card-footer">
+                            <small class="text-muted">ejercicios</small>
+                          </div>
+                        </div>
+                        <!-- Lectura rapida-->     
+                  </div>
+                  <div class="col ">
+                    <!-- Lectura rapida-->
+                    <div class="card text-start ">
+                      <img src="./Lectura.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title"> Talleres Lectura </h5>
+                        <p class="card-text">Talleres de examenes pasados para Resolver.</p>
+                      </div>
+                      <div class="card-footer">
+
+                        <!--TAlleres -->
+                        <div class="dropdown">
+                          <button  class="btn btn-dark dropdown-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Talleres
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-dark">
+                            <li>
+                            <!-- Button taller1 -->
+                            
+                            <button id="Taller1" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" >
+
+                            Taller 1 
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">9 <span class="visually-hidden">unread messages</span> </span>
+                            
+
+                            </button>
+                            <button id="video1" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#" >
+                              Video1
+                            </button>              
+                            </li>
+                            <li>
+                            <!-- Button taller2 -->
+                          <button id="Taller2" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" >
+                            Taller 2
+                            
+                          </button>
+                          <button id="Video2" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#" >
+                            Video2
+                          </button>
+                            </li>
+                            <li>
+                            <!-- Button taller3 -->
+                            <button id="Taller3" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" >
+                              Taller 3
+                            </button>
+                            <button id="Video3" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#" >
+                              Video3
+                            </button>                     
+                            </li>
+                            <li>
+                              <button id="Taller4" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" >
+                                Taller 4
+                              </button> 
+                              <button id="Video4" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#" >
+                                Video4
+                              </button> 
+                            </li>
+                            <li>
+                              <button id="Taller5" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" >
+                                Taller 5
+                              </button> 
+                              <button id="video5" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#" >
+                                Video5
+                              </button> 
+                            </li>
+
+                            <li>
+                              <button id="Taller6" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" >
+                                Taller 6
+                              </button> 
+                              <button id="video6" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#" >
+                                Video6
+                              </button> 
+                            </li>
+                            <li>
+                              <button id="Taller7" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" >
+                                Taller 7
+                              </button> 
+                              <button id="video7" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#" >
+                                Video7
+                              </button> 
+                            </li>
+
+                            <li>
+                              <button id="Taller8" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" >
+                                Taller 8
+                              </button> 
+                              <button id="video8" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#" >
+                                Video8
+                              </button> 
+                            </li>
+          
+                          </ul>
+                      </div>
+                        <!--TAlleres -->
+
+                      </div>
+                    </div>
+                    <!-- Lectura rapida-->
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+
+
+         
+
+
+          </div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- Modal Talleres Lectura -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"  data-bs-backdrop="static">
+  <div class="modal-dialog  modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1  id="puntuacion"  class="modal-title fs-5" id="exampleModalLabel">Taller</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+ <!-- ********************************* Contenido modal talleres   Lectura   -->
+
+ <div class="container-fluid">
+  
+  <div class="row">
+    <div   class="col">  <img  class="img-fluid   mx-auto d-block"  id="contexto" >  </div>
+   
+  </div>
+  <div class="row">
+    <div    class="col"> <img class="img-fluid    "  id="tarea" >   </div>
+    
+  </div>
+
+  <div class="row">
+
+    
+    <div  id="0"   class="col-md-6">  <img id="A"  class="img-fluid">   </div>
+    <div  id="1"   class="col-md-6"> <img id="B"  class="img-fluid">   </div>
+   </div>
+
+   <div class="row">
+    <div id="2"    class="col-md-6"> <img id="C" class="img-fluid"></div>
+    <div id="3"    class="col-md-6"> <img id="D" class="img-fluid"></div>
+  </div>
+
+  
+
+  
+ 
+
+</div>
+
+ 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success"  id="siguiente" >Siguente</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <!-- ********************************* Contenido modal talleres Lectura    -->   
+
+
+
+
+
+
+
+
+
+
+
+<!-- inicio Cuerpo Modal Lectura Rapida-->
+
+
+<div class="modal fade" id="Lectura400" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+
+      <div class="container-fluid text-center">
+      <div class="row ">
+
+          <div   class="col-sm-3"> 
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Lectura Rapida Configurar lectura antes de iniciar</h1>
+        
+          </div>
+
+          <div   class="col">        
+        <label  id="Palabras" for="TamañoLetra" class="form-label">Tamaño Letra</label>
+        <input  type="range" min="1" max="100" id="TamañoLetra">
+          </div>
+
+            <div   class="col">        
+            <label  id="Palabras2" for="TamañoLetra1" class="form-label">Velocidad</label>
+            <input  type="range" min="120" max="600" step="120" id="VelocidadLectura">
+              </div>
+
+               <!--Escoger lectura -->
+       <div   class="col " > 
+        <div class="btn-group">
+          <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          Escoger Lectura
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#" id="Osos">Contexto 1</a></li>
+            <li><a class="dropdown-item" href="#" id="Ada">Contexto 2</a></li>
+            <li><a class="dropdown-item" href="#" id="Leyes">Contexto 3</a></li>
+            <li><a class="dropdown-item" href="#" id="contex4">Contexto 4</a></li>
+          </ul>
+        </div>
+      </div>
+<!--Escoger lectura -->
+
+
+
+
+          <div   class="col"> 
+        <button  id="InicioLectura" type="button" class="btn btn-primary">Iniciar</button>
+          </div>
+
+               <div  class="Pausa" class="col " > 
+            <button  id="Pausar" type="button" class="btn btn-primary">Pausar</button>
+              </div>  
+         
+
+
+
+
+          
+          <button id="CerrarLecturaRapida" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      
+      </div>
+
+    </div>
+
+      </div>
+      <div class="modal-body">
+         
+        <div class="container-fluid">
+  
+          <div class="row ">
+            <div  id="CantidadPalabrasLeidas"  class="col "> Palabras    </div>
+            <div  id="cronometro" class="col">  tiempo   </div>
+          </div>
+          <div   class="row">
+            
+            <p  class="lulo2"  id="Cuento">  <p  class="lulo"  id="Cuento2">  </p>  </p> 
+            
+ 
+          </div>
+            
+         
+        
+        </div>
+
+
+
+
+      </div>
+      <div class="modal-footer">
+        
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Fin Cuerpo Modal Lectura Rapida-->
+
+
+
+
+
+
+
+<!-- inicio Cuerpo Modal Lectura Contextual-->
+
+
+<div class="modal fade" id="Lectura401" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true" data-bs-backdrop="static">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+
+      <div class="container-fluid text-center">
+      <div class="row ">
+
+          <div   class="col-sm-3"> 
+        <h1 class="modal-title fs-5" id="exampleModalLabel1">Lectura Contextual Configurar lectura antes de iniciar</h1>
+        
+          </div>
+
+          <div   class="col">        
+        <label  id="PalabrasLeidas1" for="TamañoLetra1" class="form-label">Tamaño Letra</label>
+        <input  type="range" min="1" max="100" id="TamañoLetra1">
+          </div>
+
+            <div   class="col">        
+            <label  id="Palabras3" for="TamañoLetra1" class="form-label">Velocidad</label>
+            <input  type="range" min="120" max="600" step="120" id="VelocidadLectura1">
+              </div>
+
+              <div   class="col">        
+                <label  id="PalabrasEliminadas" for="TamañoLetra1" class="form-label">Eliminar Palabras</label>
+                <input  type="range" min="120" max="600" step="120" id="EliminarPalabras">
+                  </div>
+
+
+
+          <div   class="col"> 
+        <button  id="InicioLecturaContextual" type="button" class="btn btn-primary">Iniciar</button>
+          </div>
+ 
+         
+          
+          <button id="CerrarLecturaContextual" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      
+      </div>
+
+    </div>
+
+      </div>
+      <div class="modal-body">
+         
+        <div class="container-fluid">
+  
+          <div class="row ">
+            <div  id="CantidadPalabrasLeidas1"  class="col  display-6"> Palabras    </div>
+            <div  id="cronometro1" class="col">  tiempo   </div>
+          </div>
+          <div   class="row">
+            
+            <p  class="lulo2"  id="Cuento54">  <p  class="lulo1"  id="LectuC">  </p>  </p> 
+            
+ 
+          </div>
+            
+          
+        
+        </div>
+
+
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Fin Cuerpo Modal Lectura contextual-->
+
+
+
+
+
+
+
+<!-- Inicio  Modal operaciones BAsicas   -->
+
+
+<div class="modal fade" id="OperacionesBAsicas" tabindex="-1" aria-labelledby="exampleModalLabel111" aria-hidden="true" data-bs-backdrop="static">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+
+      <div class="container-fluid text-center">
+      <div class="row ">
+
+          <div   class="col-sm-3"> 
+        <h1 class="modal-title fs-5" id="exampleModalLabel1111">Operaciones Basicas</h1>
+        
+          </div>
+
+          <div   class="col">        
+            <label   for="TamañoLetra1" class="form-label">Dificultad</label>
+            <input  type="range" min="10" max="1000" step="1" id="Dificultad">
+          </div>
+
+          <div   class="col"> 
+          <div  id="puntuaciono"  class="col">        
+            Puntuacion:
+          </div>
+          </div>
+
+          <div   class="col"> 
+          <div  id="tiempoOperaciones"  class="col">        
+            tiempo: 
+          </div>
+          </div>
+
+          <div   class="col"> 
+            <button  id="InicioOperaciones" type="button" class="btn btn-primary">Iniciar</button>
+              </div>
+                 
+          
+          <button id="cerrar" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      
+      </div>
+
+    </div>
+
+      </div>
+      <div class="modal-body">
+         
+        <div class="container-fluid text-center">
+  
+          <div  class="row ">
+            <div  id="Operandos" class="col text-start display-2" >
+              operaciones
+            </div>
+            </div>
+
+            <div  class="row ">
+            <div  id="RespuestaO" class="col text-start  d-md-block">
+              <input type="number" id="RespuestaUsuario" placeholder="Respuesta">
+            </div>
+          </div> 
+          
+
+          <div   class="row">
+            
+            <div id="Resultados" class="col ">
+              operaciones
+            </div>
+            
+ 
+          </div>
+            
+          
+        
+        </div>
+
+
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success"  id="siguienteOperacion" >Siguente</button>
+      
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- fin   Modal operaciones BAsicas   -->
+
+<button type="button" onclick="loadProyecto2()">Cargar Proyecto 2</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Cuerpo de la pagina -->
+
+
+
+
+ 
+ <!-- Toastify js -->
+
+ <p class="Historias" id="historia"  >"Soy un transhumanista. Quisiera ya mismo una pastilla que extendió la vida. Y si hubiera una pastilla que pudiera mejorar mi cognición en un 10%, estaría dispuesto a pagar mucho por ella", dice el filósofo Nick Bostrom.
+  Parece haber una incomodidad persistente con tales mejoras. Pastillas que nos hagan más inteligentes o que desaceleren el envejecimiento van contra el orden natural de las cosas. ¿Será que no se da cuenta de eso?
+  “No estoy seguro de equiparar natural con bueno”, dice. “El cáncer es natural, la guerra es natural y los parásitos que se comen nuestras entrañas son naturales. Lo natural, por lo tanto, nunca es un concepto muy útil para descubrir qué deberíamos hacer. Si hay consideraciones éticas, pero a mediados de los años 90 escribí bastante sobre la ética del mejoramiento humano, cuando era ampliamente rechazado por los académicos. Siempre decían ´¿por qué alguien querría curar el envejecimiento?´ Hablaban acerca de la sobrepoblación y el aburrimiento de vivir por más tiempo. No reconocían que es por eso que hacemos investigación médica: para extender la vida. Algo similar ocurría con el mejoramiento cognitivo”.
+  
+  </p>
+
+  <p class="Historias" id="Tomatito"  > La soledad de América Latina Antonio Pigafetta, un navegante florentino que acompañó a Magallanes en el primer viaje alrededor del mundo, escribió a su paso por nuestra América meridional una crónica rigurosa que sin embargo parece una aventura de la imaginación. Contó que había visto cerdos con el ombligo en el lomo, y unos pájaros sin patas cuyas hembras empollaban en las espaldas del macho, y otros como alcatraces sin lengua cuyos picos parecían una cuchara. Contó que había visto un engendro animal con cabeza y orejas de mula, cuerpo de camello, patas de ciervo y relincho de caballo. Contó que al primer nativo que encontraron en la Patagonia le pusieron enfrente un espejo, y que aquel gigante enardecido perdió el uso de la razón por el pavor de su
+propia imagen. Este libro breve y fascinante, en el cual ya se vislumbran los gérmenes de nuestras novelas de
+hoy, no es ni mucho menos el testimonio más asombroso de nuestra realidad de aquellos tiempos. Los cronistas de Indias nos legaron otros incontables. Eldorado, nuestro país ilusorio tan codiciado, figuró en mapas numerosos durante largos años, cambiando de lugar y de forma según la fantasía de los cartógrafos. En busca de la fuente de la Eterna Juventud, el mítico Alvar Núñez Cabeza de Vaca exploró durante ocho años el norte de México, en una expedición venática cuyos miembros se comieron unos a otros y sólo llegaron cinco de los 600 que la emprendieron. Uno de los tantos misterios que nunca fueron descifrados, es el de las once mil mulas cargadas con cien libras de oro cada una, que un día salieron del Cuzco para pagar el rescate de Atahualpa y nunca llegaron a su destino. Más tarde, durante la colonia, se vendían en Cartagena de Indias unas gallinas criadas en tierras de aluvión, en cuyas mollejas se encontraban piedrecitas de oro. Este delirio áureo de nuestros fundadores nos persiguió hasta hace poco tiempo. Apenas en el siglo pasado la misión alemana de estudiar la construcción de un ferrocarril interoceánico en el istmo de Panamá, concluyó que el proyecto era viable con la condición de que los rieles no se hicieran de hierro, que era un metal escaso en la región, sino que se hicieran de oro.
+La independencia del dominio español no nos puso a salvo de la demencia. El general Antonio López de Santana, que fue tres veces dictador de México, hizo enterrar con funerales magníficos la pierna derecha que había perdido en la llamada Guerra de los Pasteles. El general García Moreno gobernó al Ecuador durante 16 años como un monarca absoluto, y su cadáver fue velado con su uniforme de gala y su coraza de condecoraciones sentado en la silla presidencial. El general Maximiliano Hernández Martínez, el déspota teósofo de El Salvador que hizo exterminar en una matanza bárbara a 30 mil campesinos, había inventado un péndulo para averiguar si los alimentos estaban envenenados, e hizo cubrir con papel rojo el alumbrado público para combatir una epidemia de escarlatina.
+
+  </p>
+<p class="Historias" id="conversacion" >Cada noche a las 8:25, desde la ventana de su apartamento, una mujer miraba cómo su vecino se duchaba. Era un chico apuesto que nunca cerraba sus cortinas, y ella disfrutaba mirándolo, pero no sabía si era correcto. Decidió escribir a The New York Times para sacarse la duda. Desde 1999, este diario responde los dilemas éticos de sus lectores a través de una columna llamada The Ethicist [El Eticista] en su revista dominical.
+   En el año 2000, una mujer preguntó si era correcto llevar su bebida y bocadillos al cine, aunque estuviera prohibido.
+  -Si hablamos de transgresiones, la suya es menor, pero es una transgresión- le respondió Cohen. Hacer siempre lo correcto puede ser aburrido, pero ser ético no significa acatar ciegamente las reglas. Por eso el dilema del popcorn no acabó allí. Un año después de publicar esa respuesta Cohen hizo algo inédito: cambió de opinión y publicó su primer mea culpa. Ahora pensaba que los cines abusaban de su poder de fijar reglas sin importar como habían sido fijadas, escribió, su trabajo “podría ser hecho por un mono”.
+  Trece años después le pregunto a Cohen por qué el dilema del popcorn es el primero que le viene a la cabeza cuando le pido un caso que lo haya hecho transpirar…
+  -Porque es una pregunta que parece muy simple -dice-, pero es muy compleja. Randy Cohen tiene razón. Las únicas preguntas éticas interesantes son esas: las más ambiguas y sutiles. 
+  Las definiciones de manual sobre lo que es la ética suelen ser vacías y los libros sobre la ética dedican páginas y páginas a los grandes temas -el aborto, la eutanasia, comer animales-, pero suelen dejarnos igual de desamparados frente a los pequeños dilemas. 
+  Este tipo de dilemas son los que dieron vida a The Ethicist, una columna que tras dieciséis años de existencia se ha convertido en un clásico para los lectores de The New York Times: cada domingo hay familias estadounidenses que juegan a leer las preguntas y a tratar de adivinar la respuesta del Ethicist, Este fenómeno hizo evidente que los lectores estaban ávidos de respuestas éticas, pero también eran capaces de reaccionar con fanatismo si no estaban de acuerdo con ellas. En 2013, cuando un Ethicist dijo que estaba bien presentar el mismo trabajo final en dos cursos universitarios distintos, la defensora del lector tuvo que salir a contener la furia que desató entre los lectores. La columna del Ethicist puede ser “intelectualmente provocadora y a menudo desafía nuestras concepciones -explicó-, pero es solo la opinión de un hombre, no la voz del Olimpo”.
+ </p>
+
+ <p class="Historias" id="Contexto4">Ha sido un engaño durante mucho tiempo, el de hacer creer que Colombia era un país altamente cultural. Siempre ha sido un país político, que en la actualidad arrastra ese destino como un hecho fatal, cada día más gravoso. Este padecimiento resiente la capacidad de interés del público: sabe, por ejemplo, que existen en Colombia ciertas manifestaciones artísticas, pero no las hace suyas, sea para discutirlas o aprobarlas. Por otra parte, la ignorancia y la desaprensión en materia artística entre la clase dirigente y los llamados conductores de la opinión, llega a extremos a veces poco vistos. Por eso creo que la información, por más concienzuda e indispensable que sea, no basta para permear esa dura corteza de resistencias pasivas. Es preciso entonces poner de relieve que las artes plásticas con un material de excepcional condición: advertir que es creación, emoción, equivocaciones, tanteos expresivos, anhelos de dar fisionomía a la nación, voluntad de ubicarla en una cultura propia, mediocridades, estallidos casi geniales, valores reales, ficciones, problemas, temas de discusión, posibilidad de polémicas, ardores personales, doblegamientos, rebeliones. No se trata, pues, de una sustancia inodora, incolora e insípida desperdigada de modo anodino a lo largo de varios siglos. Es un tema con temperatura y con estado físico: caliente y en ebullición. De allí emanan, a veces, vagos síntomas de cómo es el país, de cómo podrá llegar a definirse y salir de su errática impersonalidad.
+ Solo las formas de la cultura pueden dar la pauta de lo que es un país o un continente. Su estudio y comprensión son esclarecedores. Y si al fin de un estudio semejante llegamos a la conclusión de que la impersonalidad continúa, esa autocrítica representa un punto de partida real, no una mentira raída y desdorada por el manoseo de ellos panegiristas profesionales.
+La moraleja de esa proposición crítica es la de que la información sobsre la historia del arte en Colombia no es un artículo de fe ni un texto inapelable: puede abrirse a la controversia, una vez que se conozca a fondo ese tema controvertible. La pintura y la escultura que se han hecho en Colombia están disociadas de la vida nacional; muchas veces se afirma que son un producto de lujo para ociosos. El día en que condigamos asociarlas y reducir a su minúscula dimensión tan burdo prejuicio, algo se habrá ganado en el anhelo de quienes deseamos ver un país, tener un país, sentir el peso vibrante de un país, y no de una agrupación incidental entre gentes incomunicadas e indiferentes.
+ </p>
+
+
+
+
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+
+</html>
+
