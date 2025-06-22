@@ -1,0 +1,326 @@
+/*==============================================================*/
+/* DBMS name:      Sybase SQL Anywhere 12                       */
+/* Created on:     5/28/2023 1:41:43 PM                         */
+/*==============================================================*/
+
+
+if exists(select 1 from sys.sysforeignkey where role='FK_ALMACENA_ALMACENA_TIENDA') then
+    alter table ALMACENA
+       delete foreign key FK_ALMACENA_ALMACENA_TIENDA
+end if;
+
+if exists(select 1 from sys.sysforeignkey where role='FK_ALMACENA_ALMACENA2_PRODUCTO') then
+    alter table ALMACENA
+       delete foreign key FK_ALMACENA_ALMACENA2_PRODUCTO
+end if;
+
+if exists(select 1 from sys.sysforeignkey where role='FK_COMPRA_COMPRA_TIENDA') then
+    alter table COMPRA
+       delete foreign key FK_COMPRA_COMPRA_TIENDA
+end if;
+
+if exists(select 1 from sys.sysforeignkey where role='FK_COMPRA_COMPRA2_CLIENTE') then
+    alter table COMPRA
+       delete foreign key FK_COMPRA_COMPRA2_CLIENTE
+end if;
+
+if exists(select 1 from sys.sysforeignkey where role='FK_TIENDA_DUENO_PROPIETA') then
+    alter table TIENDA
+       delete foreign key FK_TIENDA_DUENO_PROPIETA
+end if;
+
+if exists(select 1 from sys.sysforeignkey where role='FK_VENDER_VENDER_TIENDA') then
+    alter table VENDER
+       delete foreign key FK_VENDER_VENDER_TIENDA
+end if;
+
+if exists(select 1 from sys.sysforeignkey where role='FK_VENDER_VENDER2_PROVEEDO') then
+    alter table VENDER
+       delete foreign key FK_VENDER_VENDER2_PROVEEDO
+end if;
+
+drop index if exists ALMACENA.ALMACENA_FK;
+
+drop index if exists ALMACENA.ALMACENA2_FK;
+
+drop index if exists ALMACENA.ALMACENA_PK;
+
+drop table if exists ALMACENA;
+
+drop index if exists CLIENTE.CLIENTE_PK;
+
+drop table if exists CLIENTE;
+
+drop index if exists COMPRA.COMPRA_FK;
+
+drop index if exists COMPRA.COMPRA2_FK;
+
+drop index if exists COMPRA.COMPRA_PK;
+
+drop table if exists COMPRA;
+
+drop index if exists PRODUCTO.PRODUCTO_PK;
+
+drop table if exists PRODUCTO;
+
+drop index if exists PROPIETARIO.PROPIETARIO_PK;
+
+drop table if exists PROPIETARIO;
+
+drop index if exists PROVEEDOR.PROVEEDOR_PK;
+
+drop table if exists PROVEEDOR;
+
+drop index if exists TIENDA.DUENO_FK;
+
+drop index if exists TIENDA.TIENDA_PK;
+
+drop table if exists TIENDA;
+
+drop index if exists VENDER.VENDER_FK;
+
+drop index if exists VENDER.VENDER2_FK;
+
+drop index if exists VENDER.VENDER_PK;
+
+drop table if exists VENDER;
+
+/*==============================================================*/
+/* Table: ALMACENA                                              */
+/*==============================================================*/
+create table ALMACENA 
+(
+   UBICACION            integer                        not null,
+   ID_PRODUCTO          integer                        not null,
+   CANTIDAD             integer                        not null,
+   constraint PK_ALMACENA primary key (UBICACION, ID_PRODUCTO)
+);
+
+/*==============================================================*/
+/* Index: ALMACENA_PK                                           */
+/*==============================================================*/
+create unique index ALMACENA_PK on ALMACENA (
+UBICACION ASC,
+ID_PRODUCTO ASC
+);
+
+/*==============================================================*/
+/* Index: ALMACENA2_FK                                          */
+/*==============================================================*/
+create index ALMACENA2_FK on ALMACENA (
+ID_PRODUCTO ASC
+);
+
+/*==============================================================*/
+/* Index: ALMACENA_FK                                           */
+/*==============================================================*/
+create index ALMACENA_FK on ALMACENA (
+UBICACION ASC
+);
+
+/*==============================================================*/
+/* Table: CLIENTE                                               */
+/*==============================================================*/
+create table CLIENTE 
+(
+   NOMBRE               varchar(60)                    not null,
+   CC                   integer                        not null,
+   TELEFONO             numeric(15)                    not null,
+   constraint PK_CLIENTE primary key (CC)
+);
+
+/*==============================================================*/
+/* Index: CLIENTE_PK                                            */
+/*==============================================================*/
+create unique index CLIENTE_PK on CLIENTE (
+CC ASC
+);
+
+/*==============================================================*/
+/* Table: COMPRA                                                */
+/*==============================================================*/
+create table COMPRA 
+(
+   UBICACION            integer                        not null,
+   CC                   integer                        not null,
+   PRODUCTOS            <UNDEF>50                      not null,
+   constraint PK_COMPRA primary key (UBICACION, CC)
+);
+
+/*==============================================================*/
+/* Index: COMPRA_PK                                             */
+/*==============================================================*/
+create unique index COMPRA_PK on COMPRA (
+UBICACION ASC,
+CC ASC
+);
+
+/*==============================================================*/
+/* Index: COMPRA2_FK                                            */
+/*==============================================================*/
+create index COMPRA2_FK on COMPRA (
+CC ASC
+);
+
+/*==============================================================*/
+/* Index: COMPRA_FK                                             */
+/*==============================================================*/
+create index COMPRA_FK on COMPRA (
+UBICACION ASC
+);
+
+/*==============================================================*/
+/* Table: PRODUCTO                                              */
+/*==============================================================*/
+create table PRODUCTO 
+(
+   ID_PRODUCTO          integer                        not null,
+   CANTIDAD             integer                        not null,
+   VALOR                numeric(15)                    not null,
+   constraint PK_PRODUCTO primary key (ID_PRODUCTO)
+);
+
+/*==============================================================*/
+/* Index: PRODUCTO_PK                                           */
+/*==============================================================*/
+create unique index PRODUCTO_PK on PRODUCTO (
+ID_PRODUCTO ASC
+);
+
+/*==============================================================*/
+/* Table: PROPIETARIO                                           */
+/*==============================================================*/
+create table PROPIETARIO 
+(
+   CC_P                 integer                        not null,
+   TELEFONO             numeric(15)                    not null,
+   NOMBRE               varchar(60)                    not null,
+   constraint PK_PROPIETARIO primary key (CC_P)
+);
+
+/*==============================================================*/
+/* Index: PROPIETARIO_PK                                        */
+/*==============================================================*/
+create unique index PROPIETARIO_PK on PROPIETARIO (
+CC_P ASC
+);
+
+/*==============================================================*/
+/* Table: PROVEEDOR                                             */
+/*==============================================================*/
+create table PROVEEDOR 
+(
+   NOMBRE               varchar(60)                    not null,
+   NIT                  integer                        not null,
+   TELEFONO             numeric(15)                    not null,
+   PRODUCTOS            long varchar                   not null,
+   constraint PK_PROVEEDOR primary key (NIT)
+);
+
+/*==============================================================*/
+/* Index: PROVEEDOR_PK                                          */
+/*==============================================================*/
+create unique index PROVEEDOR_PK on PROVEEDOR (
+NIT ASC
+);
+
+/*==============================================================*/
+/* Table: TIENDA                                                */
+/*==============================================================*/
+create table TIENDA 
+(
+   ARRIENDO             numeric(15)                    not null,
+   UBICACION            integer                        not null,
+   CC_P                 integer                        not null,
+   constraint PK_TIENDA primary key (UBICACION)
+);
+
+/*==============================================================*/
+/* Index: TIENDA_PK                                             */
+/*==============================================================*/
+create unique index TIENDA_PK on TIENDA (
+UBICACION ASC
+);
+
+/*==============================================================*/
+/* Index: DUENO_FK                                              */
+/*==============================================================*/
+create index DUENO_FK on TIENDA (
+CC_P ASC
+);
+
+/*==============================================================*/
+/* Table: VENDER                                                */
+/*==============================================================*/
+create table VENDER 
+(
+   UBICACION            integer                        not null,
+   NIT                  integer                        not null,
+   PRODUCTOS            <UNDEF>50                      not null,
+   constraint PK_VENDER primary key (UBICACION, NIT)
+);
+
+/*==============================================================*/
+/* Index: VENDER_PK                                             */
+/*==============================================================*/
+create unique index VENDER_PK on VENDER (
+UBICACION ASC,
+NIT ASC
+);
+
+/*==============================================================*/
+/* Index: VENDER2_FK                                            */
+/*==============================================================*/
+create index VENDER2_FK on VENDER (
+NIT ASC
+);
+
+/*==============================================================*/
+/* Index: VENDER_FK                                             */
+/*==============================================================*/
+create index VENDER_FK on VENDER (
+UBICACION ASC
+);
+
+alter table ALMACENA
+   add constraint FK_ALMACENA_ALMACENA_TIENDA foreign key (UBICACION)
+      references TIENDA (UBICACION)
+      on update restrict
+      on delete restrict;
+
+alter table ALMACENA
+   add constraint FK_ALMACENA_ALMACENA2_PRODUCTO foreign key (ID_PRODUCTO)
+      references PRODUCTO (ID_PRODUCTO)
+      on update restrict
+      on delete restrict;
+
+alter table COMPRA
+   add constraint FK_COMPRA_COMPRA_TIENDA foreign key (UBICACION)
+      references TIENDA (UBICACION)
+      on update restrict
+      on delete restrict;
+
+alter table COMPRA
+   add constraint FK_COMPRA_COMPRA2_CLIENTE foreign key (CC)
+      references CLIENTE (CC)
+      on update restrict
+      on delete restrict;
+
+alter table TIENDA
+   add constraint FK_TIENDA_DUENO_PROPIETA foreign key (CC_P)
+      references PROPIETARIO (CC_P)
+      on update restrict
+      on delete restrict;
+
+alter table VENDER
+   add constraint FK_VENDER_VENDER_TIENDA foreign key (UBICACION)
+      references TIENDA (UBICACION)
+      on update restrict
+      on delete restrict;
+
+alter table VENDER
+   add constraint FK_VENDER_VENDER2_PROVEEDO foreign key (NIT)
+      references PROVEEDOR (NIT)
+      on update restrict
+      on delete restrict;
+
