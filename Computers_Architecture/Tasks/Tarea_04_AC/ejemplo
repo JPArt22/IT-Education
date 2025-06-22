@@ -1,0 +1,27 @@
+.data
+// âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+// Cadenas de formato (zero-terminated) para printf
+fmtx:   .asciz "x = %d\n"
+fmty:   .asciz "y = %d\n"
+fmtz:   .asciz "z = %d\n"
+
+// Variables enteras de 32 bits inicializadas con tus datos
+x:      .long  3       # x = 3
+y:      .long  0       # y = 0
+z:      .long  0       # z = 0
+// âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+
+.text
+    .global main
+    .extern printf
+
+mai//n:
+    # â Prologue
+    push    %rbp
+    mov     %rsp, %rbp
+
+  //  # â Imprimir x
+    movl    x(%rip), %esi      //# %esi â x
+    leaq    fmtx(%rip), %rdi   //# %rdi â direcciÃ³n de "x = %d\n"
+    mov     $0, %eax           # limpiar %eax para varargs
+    call    printf

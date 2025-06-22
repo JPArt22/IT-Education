@@ -1,0 +1,43 @@
+.data
+    x:       .byte 0x3d           // 61 decimal
+    y:       .byte 0xc2           // 194 decimal
+    z:       .byte 0x66           // 102 decimal
+    w:       .byte 0x66           // 102 decimal
+
+    fmtx:    .asciz "x = %u\n"
+    fmty:    .asciz "y = %u\n"
+    fmtz:    .asciz "z = %u\n"
+    fmtw:    .asciz "w = %u\n"
+
+.text
+.global main
+main:
+    subq $8, %rsp           // Alinear el stack
+
+    //Imprimir
+    movzbl x(%rip), %esi
+    leaq fmtx(%rip), %rdi
+    movb $0, %al
+    call printf
+
+    // Imprimir y
+    movzbl y(%rip), %esi
+    leaq fmty(%rip), %rdi
+    movb $0, %al
+    call printf
+
+    // Imprimir z
+    movzbl z(%rip), %esi
+    leaq fmtz(%rip), %rdi
+    movb $0, %al
+    call printf
+
+    // Imprimir w
+    movzbl w(%rip), %esi
+    leaq fmtw(%rip), %rdi
+    movb $0, %al
+    call printf
+
+    addq $8, %rsp           # Restaurar el stack
+    xor %eax, %eax          # Retornar 0
+    ret
